@@ -91,3 +91,15 @@ button {
       translate: 0 -22rem;
     }
   } */
+
+  /* media querie */
+
+  @media (max-width: 768px) {
+    #my-popover {
+      padding: 10px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
