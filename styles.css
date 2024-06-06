@@ -1,0 +1,93 @@
+button {
+    font-size: 100%;
+    padding: 0.75rem;
+    background: white;
+    transition-duration: 0.5s;
+    border: 4px solid plum;
+    background: lavenderblush;
+    border-radius: 1rem;
+    
+    &:hover,
+    &:focus {
+      background: plum;
+      color: white;
+    }
+  }
+  
+  [popover] {
+    background: black;
+    color: white;
+    font-weight: 400;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 22ch;
+    line-height: 1.4;
+    top: 2rem;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+  
+  [popover]:popover-open {
+    display: flex;
+  }
+  
+  body {
+    background: #e28dc6;
+    display: grid;
+    font-size: 1.5rem;
+    font-family: system-ui, sans-serif;
+    place-items: center;
+    height: 100dvh;
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  
+  .close-btn {
+    border: none;
+    background: none;
+    justify-self: end;
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+    
+    [aria-hidden] {
+      filter: grayscale() brightness(10);
+    }
+    
+    &:hover,
+    &:focus {
+      background: plum;
+      filter: none;
+    }
+  }
+
+  img{
+    width: 70%;
+  }
+  
+  /* Animating the popover in */
+  
+  /*   IS-OPEN STATE   */
+  [popover]:popover-open {
+    translate: 0 0;
+  }
+  
+  /*   EXIT STATE   */
+  [popover] {
+    transition: translate 0.7s ease-out, overlay 0.7s ease-out, display 0.7s ease-out allow-discrete;
+    translate: 0 -22rem;
+  }
+  
+  /*   0. BEFORE-OPEN STATE   */
+  /* @starting-style {
+    [Apretame]:popover-open {
+      translate: 0 -22rem;
+    }
+  } */
