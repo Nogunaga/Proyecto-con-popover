@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="author" content="Daniel Ariza">
+    <meta name="descripcion" content="ventana emergente">
+    <meta name="keywords" content="mostrar mensaje emergente">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <button popovertarget="my-popover" class="trigger-btn">Open Popover</button>
+
+        <div id="my-popover" popover=manual>
+            <img src="asset/img/novia.jpg" alt="Mi musa ">
+            <p>En el jardín de mi vida, ella es la rosa más hermosa. Sus pétalos, suaves como el suspiro de la brisa,
+                despiertan en mí un amor eterno. Cada mirada suya es un verso, cada sonrisa, un poema. En su abrazo
+                encuentro refugio, y en su risa, melodías que acarician mi alma. Mi esposa, mi musa, mi amor
+                inquebrantable. 💖
+            <p>
+                <button class="close-btn" popovertarget="my-popover" popovertargetaction="hide">
+                    <span aria-hidden=”true”>❌</span>
+                    <span class="sr-only">Close</span>
+                </button>
+        </div>
+    </main>
+
+</body>
+
+</html>
